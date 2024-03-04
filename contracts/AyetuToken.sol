@@ -20,7 +20,7 @@ contract AyetuToken is Initializable, ERC20Upgradeable, ERC20BurnableUpgradeable
 
     function initialize() public initializer {
         __ERC20_init("Ayetu", "ATU"); 
-        __Ownable_init();
+        __Ownable_init(msg.sender);
     }
 
     /**
