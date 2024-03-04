@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0; // Ensure compatibility with the latest Solidity version recommended by OpenZeppelin.
 
-import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
-import "@openzeppelin/contracts/token/ERC20/extensions/ERC20Burnable.sol";
-import "@openzeppelin/contracts/access/Ownable.sol";
+import "@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol";
+import "@openzeppelin/contracts-upgradeable/token/ERC20/extensions/ERC20BurnableUpgradeable.sol";
+import "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol";
 import "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
 import "@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol";
 
@@ -12,14 +12,14 @@ import "@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol";
  * @dev ERC-20 token with minting, burning, and bridge burn functionalities for cross-chain interactions.
  * Implements an upgradeable contract using the UUPS pattern.
  */
-contract AyetuToken is Initializable, ERC20, ERC20Burnable, Ownable, UUPSUpgradeable {
+contract AyetuToken is Initializable, ERC20Upgradeable, ERC20BurnableUpgradeable, OwnableUpgradeable, UUPSUpgradeable {
     address private _minter; // Minter address.
 
     event MinterChanged(address indexed newMinter);
     event BridgeBurn(address indexed owner, string recipient, uint256 amount);
 
     function initialize() public initializer {
-        __ERC20_init("Ayetu", "ATU"); // Token name and symbol initialized directly.
+        __ERC20_init("Ayetu", "ATU"); 
         __Ownable_init();
     }
 
