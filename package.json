@@ -1,0 +1,16 @@
+{
+  "name": "bridge-token",
+  "version": "1.0.0",
+  "description": "Solidity contract for bridging ATU tokens to wrapped ATU tokens on Ethereum",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.0.2",
+    "@openzeppelin/contracts-upgradeable": "^5.0.2"
+  }
+}
