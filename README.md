@@ -24,8 +24,6 @@ ERC-20 Compliant token with additional features required to bridge a wrapped tok
 
 ## Networks
 
-## Networks
-
 Ethereum Mainnet:
 
 ```bash
