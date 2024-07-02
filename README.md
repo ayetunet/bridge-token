@@ -10,9 +10,14 @@ ERC-20 Compliant token with additional features required to bridge a wrapped tok
 
 [User documentation](https://github.com/ayetunet/bridgetoken/blob/main/user-doc.md)
 
+## Keygen
+
+```bash
+./deploy/deploy_tool --keygen
+```
+
 ## Deployment
 
 ```bash
-
-./deploy/deploy_contract -infura "YOUR_INFURA_URL" -private "YOUR_PRIVATE_KEY" -public "YOUR_PUBLIC_KEY" -abi "path/to/AyetuToken.abi" -bin "path/to/AyetuToken.bin"
+./deploy/deploy_tool -infura "YOUR_INFURA_URL" -private "YOUR_PRIVATE_KEY" -public "YOUR_PUBLIC_KEY" -abi "path/to/AyetuToken.abi" -bin "path/to/AyetuToken.bin"
 ```
