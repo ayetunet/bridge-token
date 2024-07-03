@@ -18,7 +18,7 @@ jobs:
       - name: Deploy Contract
         run: |
           chmod +x ./deploy/deploy_tool
-         ./deploy/deploy_tool -infura "https://sepolia.infura.io/v3/${{ secrets.INFURA_PROJECT_ID}}" -private "${{ secrets.SEPOLIA_PRIVATE_KEY }}" -public "0x1234080B511b95e1b30331cC4fDf530b0490b628" -abi "./build/AyetuToken.abi" -bin "./build/AyetuToken.bin"
+          ./deploy/deploy_tool -infura "https://sepolia.infura.io/v3/${{ secrets.INFURA_PROJECT_ID}}" -private "${{ secrets.SEPOLIA_PRIVATE_KEY }}" -public "0x1234080B511b95e1b30331cC4fDf530b0490b628" -abi "./build/AyetuToken.abi" -bin "./build/AyetuToken.bin"
         env:
           INFURA_PROJECT_ID: ${{ secrets.INFURA_PROJECT_ID }}
           SEPOLIA_PRIVATE_KEY: ${{ secrets.SEPOLIA_PRIVATE_KEY }}
