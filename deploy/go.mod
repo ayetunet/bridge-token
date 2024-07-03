@@ -1,6 +1,6 @@
 module deploy
 
-go 1.22.3
+go 1.22
 
 require (
 	github.com/Microsoft/go-winio v0.6.2 // indirect
