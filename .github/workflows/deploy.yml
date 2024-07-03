@@ -1,5 +1,5 @@
 # Pipeline
-name: Deploy Bridge Token Contract
+name: Deploy Bridge Token Contract to Sepolia
 
 on:
   push:
